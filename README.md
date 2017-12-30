@@ -1,0 +1,1 @@
+This repository contains code for Fall 2017 Term Project work of CMPE272 Enterprise Software Platforms. A web application built using PHP as back-end, MySQL as database engine, JavaScript, HTML5, and CSS for the front-end. Visit the web-application at http://www.smartbuy.gq
