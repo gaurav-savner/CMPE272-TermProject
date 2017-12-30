@@ -1,63 +1,30 @@
 <?php 
-
   $title = "Home"; 
-
   include_once "include/header.php";
-
   include_once "include/db.php";
-
 ?>
-
-
-
  <?php
 
 if($fname!="Guest")
-
 {
-
 //check if email id is present in the system or not and insert in db 	
-
 	$db = mysqli_connect($host,$username,$password,$dbName) or die('Error connecting to MySQL server.');
-
 	$query = "SELECT * FROM `user_details` WHERE `email`='".$email."'";
-
 		$result = mysqli_query($db, $query);
-
 	$lcount=0;
-
 	while ($row = mysqli_fetch_array($result)) {
-
 		$lcount++;
-
 		break;
-
 	}
-
 	if($lcount==0)
-
 	{
-
 		//insert in database
-
 		$query = "INSERT INTO `user_details`(`firstname`, `lastname`, `email`) VALUES ('".$fname."','".$lname."','".$email."')";
-
 			$result = mysqli_query($db, $query);	
-
-		
-
 	}
-
-	
-
 	mysqli_close($db);
-
 }
-
- 
-
  ?>
-
 <body>
 
   <?php include_once "include/nav.php" ?>
